@@ -51,6 +51,36 @@ footer p {
     letter-spacing: 0.5px;
     margin: 0;
 }
+        /* This part only activates on Mobile Devices */
+@media (max-width: 768px) {
+    /* Make the hero text smaller so it fits the screen */
+    .hero-content h1 {
+        font-size: 2.8rem !important; 
+        text-align: center;
+    }
+    
+    .hero {
+        justify-content: center; /* Center the text on mobile */
+        padding: 0 5%;
+    }
+
+    /* Force all grids (Menu, About, Footer) to be 1 column only */
+    .menu-grid, .about-section, .footer {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    /* Fix the background images so they don't look stretched */
+    .hero, .dhamaka-banner, .appetizer-bg {
+        background-attachment: scroll !important; /* Parallax is heavy for phones */
+        background-position: center center;
+    }
+
+    /* Shrink the "Deals Ka Dhamaka" title so it doesn't break into two lines */
+    .dhamaka-banner h2 {
+        font-size: 2rem !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -174,4 +204,5 @@ footer p {
     <p>© Lasani Pizza Time | Designed & Developed by Aleema Fatima</p>
   </footer>
 </body>
+
 </html>
